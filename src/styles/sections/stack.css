@@ -32,11 +32,11 @@
   font-size: var(--step-2);
   line-height: 1.1;
 }
-.slab-note {
+.slab .slab-note {
   grid-area: note;
   justify-self: start;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-family: var(--font-body);
+  letter-spacing: normal;
   border: 1px solid color-mix(in srgb, var(--on-layer) 50%, transparent);
   padding: 0 var(--space-2);
 }
@@ -74,9 +74,9 @@
   display: grid;
   gap: var(--space-3);
 }
-.slab-label {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.stack .slab-label {
+  font-family: var(--font-body);
+  letter-spacing: normal;
   opacity: 0.85;
 }
 .slab-related ul { display: flex; flex-wrap: wrap; gap: 0 var(--space-4); margin-top: var(--space-1); }

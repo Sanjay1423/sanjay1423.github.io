@@ -12,13 +12,12 @@
   .section { padding-block: var(--space-7) var(--space-6); }
 }
 
-/* Section header: mono number, display title, full-width rule */
+/* Section header: display title, full-width rule */
 .section-header {
   display: grid;
   gap: var(--space-3);
   margin-bottom: var(--space-5);
 }
-.section-header .eyebrow { color: var(--accent-text); }
 .section-header h2 {
   font-family: var(--font-display);
   font-size: var(--step-4);

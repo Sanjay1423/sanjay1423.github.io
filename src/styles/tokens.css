@@ -1,3 +1,9 @@
+/* Hallmark · checked: 2026-11-22 · genre: editorial (inferred)
+ * floor: 0 FAIL · fixed: 8 (7a, 24a, 26b, 34, 48, 54, 63, 67) · structural: 4 printed (9, 42, 58, 65)
+ * copy: verbatim (docs/REDESIGN_SPEC.md and npm run audit lock the wording, date dashes included)
+ * built: the project · redesign: polish · v2.0.0 */
+/* Hallmark · waive 26b · no form controls and no aria-disabled anywhere · the Copy button, the Work filters and the Menu button are never disabled, so :disabled has nothing to style */
+
 /* Design tokens. One set of values via light-dark(); see docs/REDESIGN_SPEC.md Section 4. */
 :root {
   color-scheme: light dark;
@@ -20,6 +26,8 @@
   --layer-desktop:  light-dark(#3a3631, #272320);
   --layer-mobile:   light-dark(#4a4741, #201e1c);
   --on-layer:       #f1ede4;
+  /* text on an accent fill: a warm near-white, never pure #fff */
+  --on-accent:      #fdf8f3;
 
   /* layer markers: >= 3:1 against --paper in both themes */
   --mark-hardware: light-dark(#2b3a42, #7f9eae);

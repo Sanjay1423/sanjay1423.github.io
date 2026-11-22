@@ -37,7 +37,7 @@ const hasDiagram = project.slug === 'backend-services';
           <dl class="case-body">
             <div><dt class="mono">Problem</dt><dd>{project.caseStudy.problem}</dd></div>
             <div><dt class="mono">What I did</dt><dd>{project.caseStudy.whatIDid}</dd></div>
-            <div><dt class="mono">A decision I'm proud of</dt><dd>{project.caseStudy.decision}</dd></div>
+            <div><dt class="mono">A decision I’m proud of</dt><dd>{project.caseStudy.decision}</dd></div>
             <div><dt class="mono">Result</dt><dd>{project.caseStudy.result}</dd></div>
           </dl>
           {hasDiagram && <ArchDiagram />}

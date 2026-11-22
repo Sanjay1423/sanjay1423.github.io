@@ -12,7 +12,7 @@
   padding: 0;
   min-height: 44px;
   cursor: pointer;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: var(--step--1);
   color: var(--ink-2);
   text-decoration: underline;
@@ -22,6 +22,7 @@
   transition: color var(--t-fast) var(--ease), text-decoration-color var(--t-fast) var(--ease);
 }
 .work-filters button:hover { color: var(--ink); }
+.work-filters button:active { color: var(--accent-text); }
 .work-filters button[aria-pressed='true'] { color: var(--ink); text-decoration-color: var(--accent); }
 
 .work-list { border-top: 1px solid var(--ink); }
@@ -79,7 +80,7 @@
   color: var(--accent-text);
 }
 .case-body { display: grid; gap: var(--space-3); margin-block: var(--space-3); }
-.case-body dt { color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.06em; }
+.case-body dt { color: var(--ink-2); font-family: var(--font-body); letter-spacing: normal; }
 
 .arch {
   display: grid;
@@ -102,7 +103,7 @@
 .arch-arrow, .arch-link { fill: none; stroke: var(--ink-2); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
 .arch-link { stroke: var(--accent); stroke-dasharray: 3 3; }
 .arch text { font-family: var(--font-mono); fill: var(--ink-2); }
-.arch-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+.arch .arch-label { font-family: var(--font-body); font-size: 13px; }
 .arch-name { font-size: 13px; fill: var(--ink); }
 .arch-small { font-size: 12px; }
 .arch .arch-accent { fill: var(--accent-text); }
@@ -120,5 +121,5 @@
   }
   .project-layer, .project-stack, .project-group { grid-column: auto; }
   .project-group { justify-self: end; }
-  .project-detail { grid-column: 1 / span 8; padding-left: calc(3rem + var(--space-4)); }
+  .project-detail { grid-column: 1 / span 8; padding-left: calc(var(--space-5) + var(--space-4)); }
 }

@@ -6,7 +6,7 @@ export const layers: Layer[] = [
     id: 'hardware',
     name: 'Hardware',
     items: ['Embedded C', 'LoRa', 'C'],
-    note: 'earlier project',
+    note: 'Earlier project',
   },
   {
     id: 'backend',

@@ -2,7 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--paper) 85%, transparent);
+  /* opaque: at 85% the headings scrolled visibly through the wordmark */
+  background: var(--paper);
   border-bottom: 1px solid var(--rule);
 }
 .topbar-inner {
@@ -33,7 +34,7 @@
   position: relative;
 }
 .topnav a {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: var(--step--1);
   color: var(--ink-2);
   display: inline-flex;
