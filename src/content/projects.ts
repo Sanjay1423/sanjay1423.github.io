@@ -45,7 +45,7 @@ export const projects: Project[] = [
     layer: 'hardware',
     group: 'earlier',
     summary:
-      "Sensors and LoRa send a wearer's health data to a remote monitor. Built with Embedded C for extreme conditions.",
+      "Sensors and LoRa send a wearer’s health data to a remote monitor. Built with Embedded C for extreme conditions.",
     stack: ['Embedded C', 'LoRa'],
   },
 ];

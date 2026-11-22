@@ -13,7 +13,20 @@
 .hero-copy {
   position: relative;
 }
-.hero-meta span { white-space: nowrap; }
+/* Meta as columns separated by hairlines, not a middle-dot string. */
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  font-size: var(--step--1);
+}
+.hero-meta li { white-space: nowrap; }
+.hero-meta li + li { border-left: 1px solid var(--rule-strong); padding-left: var(--space-3); }
+/* Narrow screens: one fact per line, so a wrap never strands a separator. */
+@media (max-width: 767.98px) {
+  .hero-meta { flex-direction: column; }
+  .hero-meta li + li { border-left: 0; padding-left: 0; }
+}
 .hero-name {
   font-family: var(--font-display);
   font-size: var(--step-6);
@@ -51,7 +64,9 @@
 }
 .btn:hover { background: var(--paper-2); }
 .btn-primary { background: var(--ink); color: var(--paper); }
-.btn-primary:hover { background: var(--accent-text); border-color: var(--accent-text); color: #fff; }
+.btn-primary:hover { background: var(--accent-text); border-color: var(--accent-text); color: var(--on-accent); }
+.btn:active { background: var(--rule); }
+.btn-primary:active { background: var(--ink-2); border-color: var(--ink-2); color: var(--paper); }
 
 .hero-photo img {
   width: 100%;
@@ -86,11 +101,9 @@
 }
 .trace-node circle { fill: var(--paper); stroke: var(--rule-strong); stroke-width: 1; }
 .trace-node text {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-body);
+  font-size: 13px;
   fill: var(--ink-2);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 .trace-pulse { fill: var(--accent); opacity: 0; }
 

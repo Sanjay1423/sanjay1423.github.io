@@ -15,11 +15,13 @@ const since = profile.started.split(' ').pop();
       <RequestTrace />
       <h1 id="hero-name" class="hero-name">{profile.name}</h1>
       <p class="hero-line">{profile.positioning}</p>
-      <p class="mono hero-meta">
-        <span>{profile.city}</span> · <span>{profile.role} @ {profile.company}</span> · <span>Since {since}</span>
-      </p>
+      <ul class="hero-meta" role="list">
+        <li>{profile.city}</li>
+        <li>{profile.role} @ {profile.company}</li>
+        <li>Since {since}</li>
+      </ul>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">See the work <span aria-hidden="true">→</span></a>
+        <a class="btn btn-primary" href="#work">See the work</a>
         {profile.resume ? (
           <a class="btn" href={`${base}${profile.resume}`}>Résumé <Icon name="arrow-up-right" /></a>
         ) : (

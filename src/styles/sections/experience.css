@@ -67,7 +67,7 @@
   color: var(--accent-text);
 }
 .log-marker p { color: var(--accent-text); }
-.log-marker-label { text-transform: uppercase; letter-spacing: 0.08em; }
+.log-marker-label { font-family: var(--font-body); letter-spacing: normal; }
 
 /* Branches: thinner, indented, quieter */
 .branches {
@@ -80,7 +80,7 @@
   border-left: 1px solid var(--rule-strong);
   padding-left: var(--space-4);
 }
-.branch-kind { text-transform: uppercase; letter-spacing: 0.06em; }
+.branch-kind { font-family: var(--font-body); letter-spacing: normal; }
 .branch-title {
   font-family: var(--font-display);
   font-size: var(--step-2);
